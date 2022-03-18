@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'study/base.html' %}
+{% block content %}
+<h1>{{title}}</h1>
+<ul>
+{% for g in groups %}
+    <li>
+        <p>Группа {{g.number}}. Год обучения {{g.study_year}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

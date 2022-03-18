@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Учебный сайт</title>
-</head>
-<body>
-<h1>Основная страница</h1>
-<div>
-<p>Учебный сайт по клеточным автоматам</p>
-    <fieldset>
-        <p>Для просмотра успеваемости авторизуйтесь</p>
-        <form action ="{%url 'study:login' %}" method = "post">
-            <input type = 
+{% extends 'study/base.html' %}
 
-        </form>
-    </fieldset>
-
-</div>
-</body>
-</html>
+{% block content %}
+<h1>{{title}}</h1>
+<p>Заглушка для главной страницы</p>
+{% endblock %}

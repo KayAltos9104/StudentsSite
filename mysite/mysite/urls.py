@@ -4,7 +4,7 @@ from study.views import *
 from mysite import settings
 from django.conf.urls.static import static
 
-#include позволяет подгружать в url из проектов
+# include позволяет подгружать в url из проектов
 
 urlpatterns = [
     path('study/', include('study.urls', namespace="study")),

@@ -4,7 +4,7 @@
 <ul>
 {% for g in groups %}
     <li>
-        <p>Группа {{g.number}}. Год обучения {{g.study_year}}</p>
+        <a href="{% url 'study:study_progress' g.pk%}"><p>Группа {{g.number}}. Год обучения {{g.study_year}}</p></a>
     </li>
     {% endfor %}
 </ul>

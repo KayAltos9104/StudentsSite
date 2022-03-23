@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'study/base.html' %}
+{% block content %}
+<h1>{{title}}</h1>
+<table>
+     <tr>
+       <th></th>
+{% for h in headers %}
+         <th>{{h}}</th>
+{% endfor %}
+     </tr>
+{% for p in progress %}
+    <tr>
+        <th>{{p.surname}}</th>
+        {% for w in p.table %}
+            {% if w.status == 'Правки' %}
+                    <td bgcolor="Red">{{w.status}}</td>
+            {% elif w.status == 'Проверка' %}
+                <td bgcolor="Yellow">{{w.status}}</td>
+            {% elif w.status == 'Сдано' %}
+                   <td bgcolor="Green">{{w.status}}</td>
+            {%else%}
+            <td >{{w.status}}</td>
+            {%endif%}
+        {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock %}

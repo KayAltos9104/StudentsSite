@@ -32,7 +32,7 @@ def study_progress(request, group):
     students = Student.objects.all()
     works = Work.objects.all()
     progress = Progress.objects.all()
-    list_w=[]
+    list_w = []
     for s in students:
         if s.group_id==group:
             table = []

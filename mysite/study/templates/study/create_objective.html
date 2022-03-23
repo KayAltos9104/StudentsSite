@@ -10,8 +10,16 @@
 <body>
 <form action="{% url 'study:new_obj'%}" method="post">
     {% csrf_token %}
-    <p><label>Название: </label><input type="text" name="name"></p>
-    <p><button class="floating-button" type="submit"><b>Отправить</b></button></p>
+    <fieldset>
+        <legend>Добавить новое задание</legend>
+        <p><label>Название задания: </label><input class="base-input" type="text" name="name"></p>
+        <p><label>Дата: </label><input class="base-input" type="date" name="date" ></p>
+        <p><button class="button_main" type="submit"><b>Отправить</b></button></p>
+    </fieldset>
 </form>
 </body>
 </html>
+
+<input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31">

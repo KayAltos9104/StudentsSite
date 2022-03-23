@@ -34,7 +34,7 @@ class Group (models.Model):
 
 class Progress(models.Model):
     student = models.ForeignKey('Student', on_delete=models.PROTECT, verbose_name='Студент')
-    work = models.ForeignKey('Work', on_delete=models.PROTECT, verbose_name='Задание')
+    work = models.ForeignKey('Work', on_delete=models.CASCADE, verbose_name='Задание')
     NO = 'Нет'
     REVIEW = 'Проверка'
     CORRECTION = 'Правки'

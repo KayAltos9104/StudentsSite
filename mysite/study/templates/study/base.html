@@ -14,13 +14,25 @@
 {%block content%}
 
 {% endblock %}
+
 {% block mainmenu %}
-<ul>
+<table class="for_buttons">
     {% for m in menu %}
-    <li><a href="{% url m.url_name%}">{{m.title}}</a></li>
+    <!--<p><a href="{% url m.url_name%}">{{m.title}}</a></p>-->
+
+    <tr>
+        <td>
+            <form action="{% url m.url_name%}">
+          <button class="button_menu" type="submit"><b>{{m.title}}</b></button>
+        </form>
+        </td>
+
+    </tr>
+
     {% endfor %}
-</ul>
+</table>
 {% endblock mainmenu %}
+
 <tr><td valign="top">
     <div id="footer">
         <p>© 2021 Полное или частичное копирование и дальнейшее распространение всех материалов сайта не запрещено

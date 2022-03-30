@@ -9,7 +9,12 @@
     <link rel="shortcut icon" href="{%static 'study/images/ico.ico' %}" type="image/x-icon"/>
 </head>
 <body>
-<h1><a href="{%url 'study:index' %}">На главную</a></h1>
+<!--<h1><a href="{%url 'study:index' %}">На главную</a></h1>-->
+<p>
+    <a href = "{%url 'study:index' %}">
+        <img src="{%static 'study/images/N7.png'%}" width = 60 height = auto>
+    </a>
+</p>
 
 {%block content%}
 
